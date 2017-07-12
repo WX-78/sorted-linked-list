@@ -38,7 +38,6 @@ void List::addNode(int number){
 			n -> next = curr;
 		}
 	}
-
 }
 
 void List::printList(){
@@ -66,25 +65,18 @@ void List::deleteNode(int number){
 	if (n == head){
 		head = head -> next;
 	}
-	delete[] n;
 }
 
 void List::deleteList(){
 	if (head != NULL){
 		node* curr = head;
-		while (curr -> next != NULL){
-			head = curr;
+		while(curr -> next != NULL){
 			curr = curr -> next;
-			delete[] head;
+			delete head;
+			head = curr;
 		}
-		head = NULL;
-		delete[] head;
-
-		curr = NULL;
-		delete[] curr;
-
-		temp = NULL;
-		delete[] temp;
 	}
+
+	delete head;	
 }
 

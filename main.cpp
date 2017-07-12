@@ -12,11 +12,11 @@ struct node{
 int main(){
 
 	List xxx;
-	xxx.addNode(20);
+ 	xxx.addNode(20);
 	xxx.addNode(23);
 	xxx.addNode(2);
-
 	xxx.printList();	
+	xxx.addNode(8);
 
 	return 0;
 }
