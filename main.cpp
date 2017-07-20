@@ -1,22 +1,21 @@
-#include <iostream>
 #include "list.h"
 
-struct node{
-	int data;		
-	node *next;	
-};
-
-
-
-
 int main(){
+	
+	List <float> xxx;
+	
+	xxx.push(3, 7.2);
+	xxx.push(5, 8.3);
+	xxx.push(1, 0.2);
+	xxx.push(7, 1.3);
 
-	List xxx;
- 	xxx.addNode(20);
-	xxx.addNode(23);
-	xxx.addNode(2);
-	xxx.printList();	
-	xxx.addNode(8);
+	xxx.pop(5);
+
+	xxx.push(9, 0.3);
+	xxx.push(2, 6.8);
+
+
+	xxx.print();
 
 	return 0;
 }
